@@ -1,8 +1,17 @@
+package com.collections;
+
 import com.collections.Sets;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
+
+import java.util.HashSet;
 import java.util.List;
 import java.util.Arrays;
+import java.util.Set;
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class SetsTest {
 
@@ -70,8 +79,11 @@ public class SetsTest {
             String expectedResult = DRINK_NAMES.get(i);
 
             String actualResult = Sets.checkDrinks(item[0], Arrays.asList(item).subList(1, item.length));
-            Assertions.assertEquals(expectedResult, actualResult,
+            assertEquals(expectedResult, actualResult,
                     String.format("Expected %s for %s, but got something else instead.", expectedResult, item[0]));
         }
     }
+
+
+
 }

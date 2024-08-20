@@ -11,6 +11,22 @@ public class Sets {
             "triple sec", "coffee liqueur", "almond liqueur", "champagne", "orange curacao", "rum"));
 
     public static String checkDrinks(String s, List<String> strings) {
-        return null;
+        boolean categorizeDrink = false;
+        for (String string : strings) {
+            if (ALCOHOLS.contains(string)) {
+                categorizeDrink = true;
+            }
+        }
+        String finalMessage = "";
+        if (categorizeDrink) {
+            finalMessage += s + " Cocktail";
+        }
+        else {
+            finalMessage += s + " Mocktail";
+        }
+        return finalMessage;
     }
+
+
+
 }
