@@ -146,7 +146,7 @@ public class MapsTests {
         initial.put("coal", 15);
         initial.put("diamond", 3);
         initial.put("wood", 67);
-        initial.put("silver", 0);
+        initial.put("silver", 0);   
 
         List<Map.Entry<String, Integer>> expected = new ArrayList<>(List.of(
                 Map.entry("coal", 15),
